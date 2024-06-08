@@ -45,41 +45,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
-const form = document.querySelector('form');
-if (form) {
-    form.addEventListener('submit', async function (event) {
-        event.preventDefault();
-        const formData = new FormData(this);
-        
-        try {
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const formData = new FormData(this);
             const response = await fetch('/extract_features', {
                 method: 'POST',
                 body: formData
             });
-
-            if (!response.ok) {
-                throw new Error('Server cannot be reached');
-            }
-
             const result = await response.json();
             //document.getElementById('result').textContent = JSON.stringify(result, null, 2);
-        } catch (error) {
-            displayError(error.message);
-        }
-    });
-}
-
-function displayError(errorMessage) {
-    const errorNotification = document.createElement('div');
-    errorNotification.classList.add('error-notification');
-    errorNotification.textContent = errorMessage;
-    document.body.appendChild(errorNotification);
-
-    // Remove the notification after some time (e.g., 5 seconds)
-    setTimeout(() => {
-        errorNotification.remove();
-    }, 5000);
-}
+        });
+    }
 
 
 });
