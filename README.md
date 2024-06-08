@@ -1,6 +1,47 @@
 <div id="top"></div>
 <div align="center">
-<h3 align="center"> NLTM-DID - NIT GOA</h3>
+<title>National Language Translation Mission - National Institute of Technology GOA</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    h1, h2, h3 {
+      margin-top: 30px;
+    }
+    h1 {
+      color: #333;
+    }
+    h2 {
+      color: #666;
+    }
+    p {
+      text-align: justify;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  
 </div>
 
 <!-- ABOUT THE PROJECT -->
