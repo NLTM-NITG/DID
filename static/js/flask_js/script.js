@@ -45,17 +45,53 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
-    const form = document.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', async function (event) {
-            event.preventDefault();
-            const formData = new FormData(this);
+const form = document.querySelector('form');
+if (form) {
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        try {
             const response = await fetch('/extract_features', {
                 method: 'POST',
                 body: formData
             });
             const result = await response.json();
-            //document.getElementById('result').textContent = JSON.stringify(result, null, 2);
-        });
-    }
+            // document.getElementById('result').textContent = JSON.stringify(result, null, 2);
+        } catch (error) {
+            console.error('Error:', error);
+            // Show pop-up for socket error
+            displaySocketError();
+        }
+    });
+}
+
+function displaySocketError() {
+    // Create a pop-up container
+    const popUpContainer = document.createElement('div');
+    popUpContainer.classList.add('popup-container');
+
+    // Create a pop-up message
+    const popUpMessage = document.createElement('div');
+    popUpMessage.classList.add('popup');
+    popUpMessage.textContent = 'Server cannot be reached';
+
+    // Create a button
+    const button = document.createElement('button');
+    button.textContent = 'Okay';
+
+    // Add click event listener to the button
+    button.addEventListener('click', function () {
+        // Remove the pop-up container when the button is clicked
+        document.body.removeChild(popUpContainer);
+    });
+
+    // Append the button to the pop-up message
+    popUpMessage.appendChild(button);
+
+    // Append the pop-up message to the pop-up container
+    popUpContainer.appendChild(popUpMessage);
+
+    // Append the pop-up container to the body
+    document.body.appendChild(popUpContainer);
+}
 });
