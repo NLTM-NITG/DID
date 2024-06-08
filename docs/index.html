@@ -6,5 +6,12 @@
 </head>
 <body>
     <h1>Hello, World!</h1>
+    <button id="redirect-button">Go to Main Page</button>
+
+    <script type="text/javascript">
+        document.getElementById('redirect-button').addEventListener('click', function() {
+            window.location.href = '../static/index.html';
+        });
+    </script>
 </body>
 </html>
