@@ -50,60 +50,36 @@ if (form) {
     form.addEventListener('submit', async function (event) {
         event.preventDefault();
         const formData = new FormData(this);
+        
         try {
             const response = await fetch('/extract_features', {
                 method: 'POST',
                 body: formData
             });
+
             if (!response.ok) {
-                // If response is not OK (status code other than 2xx), throw an error
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                throw new Error('Server cannot be reached');
             }
+
             const result = await response.json();
-            // document.getElementById('result').textContent = JSON.stringify(result, null, 2);
+            //document.getElementById('result').textContent = JSON.stringify(result, null, 2);
         } catch (error) {
-            console.error('Error:', error);
-            // Proceed with normal processing for other errors
+            displayError(error.message);
         }
     });
 }
 
-// Display pop-up for any kind of error onclick of the button
-document.addEventListener('click', function(event) {
-    const target = event.target;
-    if (target.tagName === 'BUTTON' && target.textContent === 'Okay') {
-        displaySocketError();
-    }
-});
+function displayError(errorMessage) {
+    const errorNotification = document.createElement('div');
+    errorNotification.classList.add('error-notification');
+    errorNotification.textContent = errorMessage;
+    document.body.appendChild(errorNotification);
 
-function displaySocketError() {
-    // Create a pop-up container
-    const popUpContainer = document.createElement('div');
-    popUpContainer.classList.add('popup-container');
-
-    // Create a pop-up message
-    const popUpMessage = document.createElement('div');
-    popUpMessage.classList.add('popup');
-    popUpMessage.textContent = 'Server cannot be reached';
-
-    // Create a button
-    const button = document.createElement('button');
-    button.textContent = 'Okay';
-
-    // Add click event listener to the button
-    button.addEventListener('click', function () {
-        // Remove the pop-up container when the button is clicked
-        document.body.removeChild(popUpContainer);
-    });
-
-    // Append the button to the pop-up message
-    popUpMessage.appendChild(button);
-
-    // Append the pop-up message to the pop-up container
-    popUpContainer.appendChild(popUpMessage);
-
-    // Append the pop-up container to the body
-    document.body.appendChild(popUpContainer);
+    // Remove the notification after some time (e.g., 5 seconds)
+    setTimeout(() => {
+        errorNotification.remove();
+    }, 5000);
 }
+
 
 });
