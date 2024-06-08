@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="/static/css/did_css/styles.css" rel="stylesheet" />
+    <link href="../static/css/did_css/styles.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/flask_css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('../static', filename='css/flask_css/styles.css') }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Bootstrap core JS-->
@@ -23,9 +23,9 @@
     <!-- Socket.io -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <!-- Core theme JS-->
-    <script src="{{ url_for('static', filename='js/flask_js/script.js') }}"></script>
+    <script src="{{ url_for('../static', filename='js/flask_js/script.js') }}"></script>
     <!-- Custom JavaScript -->
-    <script src="/static/js/did_js/scripts.js"></script>
+    <script src="../static/js/did_js/scripts.js"></script>
 
 
 
@@ -42,12 +42,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/projects.html#Datasets">Datasets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/projects.html#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/update.html">Demo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact.html#team">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact.html#Contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../static/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../static/projects.html#Datasets">Datasets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../static/projects.html#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="update.html">Demo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../static/contact.html#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../static/contact.html#Contact">Contact</a></li>
                 </ul>
             </div>
         </div>
