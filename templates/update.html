@@ -15,7 +15,8 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../static/css/did_css/styles.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/flask_css/styles.css') }}">
+    <!-- When running flask run this line <link rel="stylesheet" href="{{ url_for('static', filename='css/flask_css/styles.css') }}"> -->
+    <link href="../static/css/flask_css/styles.css" rel="stylesheet" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Bootstrap core JS-->
@@ -23,7 +24,8 @@
     <!-- Socket.io -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <!-- Core theme JS-->
-    <script src="{{ url_for('static', filename='js/flask_js/script.js') }}"></script>
+    <!-- When running flask <script src="{{ url_for('static', filename='js/flask_js/script.js') }}"></script>  -->
+    <script src="../static/js/flask_js/scripts.js"></script>
     <!-- Custom JavaScript -->
     <script src="../static/js/did_js/scripts.js"></script>
 
