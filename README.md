@@ -1,23 +1,18 @@
 <div id="top"></div>
 <div align="center">
 <h3 align="center"> NLTM-DID - NIT GOA</h3>
-  <p align="center">
-    Dialect Identification for Indian Languages<br />
-    <br /><br />
-    <strong>
-    <a href="#">View Deployment</a>
-    </strong>
-  </p>
 </div>
 
 <!-- ABOUT THE PROJECT -->
 
-<h2> 📝About The Project </h2>
+<h1> Dialect Identification for Indian Languages  </h1>
 
 <p align="center">
   <img src="static/assets/img/bg-masthead.jpeg" alt="Screenshot">
 </p>
-<br /> <br />
+
+<h2>📝About</h2>
+
 <p style="text-align: justify;">
 The focus of the work at <a href="https://www.nitgoa.ac.in/">National Institute of Technology Goa</a> is on Spoken Language Identification with a focus on development of Dialect Identification System. The task of spoken language identification (LID) involves automatically identifying the language in which a given speech utterance was spoken. An important aspect of a spoken language is its dialects. Dialects of a given language are differences in speaking style of the first language or native language (L1) because of geographical and ethnic differences.
 </p>
@@ -28,6 +23,39 @@ The focus of the work at <a href="https://www.nitgoa.ac.in/">National Institute 
 Dialect of a speech utterance acts as a virtual geo-tag for the utterance that helps in predicting the geographical location to which a speaker belongs. The dialectal variations of a spoken Indian language are a matter of concern for any automatic processing of speech utterances from that language. The project aims at addressing the issues of identifying the dialect in the conversational speech of the Indian languages. Dialect identification is difficult when compared to LID due to high interclass similarity among the dialects of a language. We also propose to explore deep learning methods for the dialect identification task.
 </p>
 
+<p align="right">(<a href="#top">⬆️</a>)</p>
+
+<h1> Model Information </h1>
+
+## Model weights
+
+Model weights are saved as a pth file and present at [Marathi Model].(Model_Marathi.pth). 
+
+
+## Model Architecture
+
+We use [wav2vec2].(https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) for feature extraction.
+And use u-vector model as defined in <a href="https://dblp.org/db/conf/specom/specom2023-2.html">Sean Monteiro, Ananya Angra, Muralikrishna H, Veena Thenkanidiyoor, and A. D. Dileep, Exploring the Impact of Different Approaches for Spoken Dialect Identification of Konkani Language, in Proceedings of 25th International Conference on Speech and Computer (SPECOM-2023), November-December 2023</a>
+
+## Benchmark details
+
+We use a variety of metrics as the benchmark for the validity of the model. Please see this document [Benchmark].() for more details.
+
+<h1> Demo website </h1>
+
+## Webite Demo
+
+<strong><a href="#">Deployment</a></strong>
+
+## Demo screenshots
+- ss1
+- ss2
+- ss3
+- ss4
+
+## License
+
+This project is licensed under the [NLTM Creative Commons CC-BY-4 LICENSE](LICENSE) file for details.
 <p align="right">(<a href="#top">⬆️</a>)</p>
 
 ### 🛠Built With
@@ -46,12 +74,8 @@ Dialect of a speech utterance acts as a virtual geo-tag for the utterance that h
 
 <p align="right">(<a href="#top">⬆️</a>)</p>
 
-## Model weights
+<h1> Tutorials </h1>
 
-## Model Architecture
-We use [wav2vec2].(https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) for feature extraction.
-
-#Tutorials
 <!-- GETTING STARTED -->
 
 ## Getting Started
@@ -95,8 +119,11 @@ If you want to get a local copy of this app.
 7. The site is hosted now on specified port as per Flask cnofig.
     
 
+
+
 <p align="right">(<a href="#top">⬆️</a>)</p>
-# Limitation
+
+## Limitation
 These models are trained are trained on a number of Indian Languages for a variety of dialects. Therefore, these models may fail in the following conditions.
 
 - Presence of unfamiliar dialects and accents.
@@ -104,10 +131,23 @@ These models are trained are trained on a number of Indian Languages for a varie
 - Contains too much noise and unclear speech.
 - Does not belong to the dialects of Puneri or Marawadi in Marathi Language.
 - Note: Please follow the corresponding Readme.md file for more details.
+
+## Fine tuning and inference pipeline
+
+You can use the inference pipeline for wave2vec for feature extraction
+
+Please download the model onto your local systeam. place the CSNET, LSTM and U-vec model code into your .py file.
+Extract the features using wave2vece facebook model found here.
+Pass feaatures through this model and use it.
+
+For finetuning
+Yet to add the script
+
+
 <p align="right">(<a href="#top">⬆️</a>)</p>
 <!-- CONTACT -->
 
-## Contact
+# Contact
 
 LinkedIn:     [EvanderDS](https://www.linkedin.com/in/evanderds/)
 <br>
@@ -121,7 +161,4 @@ This work is performed with the support of the project named "Speech Technologie
 
 <p align="right">(<a href="#top">⬆️</a>)</p>
 
-## License
 
-This project is licensed under the NLTM License - see the [LICENSE](LICENSE) file for details.
-<p align="right">(<a href="#top">⬆️</a>)</p>
