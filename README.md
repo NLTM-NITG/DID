@@ -1,11 +1,16 @@
-<p text-align="center"> <h1> NLTM - National Institute of Technology GOA </h1> </p>
+<div style="text-align: center;">
+    <h1>NLTM - National Institute of Technology GOA</h1>
+</div>
+  
 <!-- ABOUT THE PROJECT -->
+
+
+## Dialect Identification for Indian Languages
 
 <p align="center">
   <img src="static/assets/img/bg-masthead.jpeg" alt="Screenshot">
 </p>
 
-## Dialect Identification for Indian Languages
 
 ### Introduction
 
@@ -25,8 +30,8 @@ Dialect of a speech utterance acts as a virtual geo-tag for the utterance that h
 
 We use two models in unison for Dialect Identification. A feature extractor and then our predictor model.
 
-Our feature Extractor is a wav2vec2 model hosted on HuggingFace and developed by Facebook. [Link](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) <br>
-Predictor: U-vector model as defined in Sean Monteiro, Ananya Angra, Muralikrishna H, Veena Thenkanidiyoor, and A. D. Dileep, Exploring the Impact of Different Approaches for Spoken Dialect Identification of Konkani Language, in Proceedings of 25th International Conference on Speech and Computer (SPECOM-2023), November-December 2023. [Link](https://dblp.org/db/conf/specom/specom2023-2.html)
+Our feature Extractor is a wav2vec2 model hosted on HuggingFace and developed by Facebook [Link.](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) <br>
+Predictor: U-vector model as defined in Sean Monteiro, Ananya Angra, Muralikrishna H, Veena Thenkanidiyoor, and A. D. Dileep, Exploring the Impact of Different Approaches for Spoken Dialect Identification of Konkani Language, in Proceedings of 25th International Conference on Speech and Computer (SPECOM-2023), November-December 2023 [Link.](https://dblp.org/db/conf/specom/specom2023-2.html)
 
 
 ### Weights
@@ -44,10 +49,36 @@ Our model's validity is assessed using a range of metrics. For more information,
 <strong>[View Deployment](https://nltm-nitg.github.io/Dialect-Identification/)</strong>
 
 ### Demo screenshots
-- ss1
-- ss2
-- ss3
-- ss4
+
+> Landing Page
+  
+<p align="center">
+  <img src="Demo Pictures/Landing Page.png" alt="Screenshot">
+</p>
+
+> Predicting Dialect
+  
+ <p align="center">
+  <img src="Demo Pictures/Main Demo Page.png" alt="Screenshot">
+</p>
+
+> Before predicting Dialect
+
+ <p align="center">
+  <img src="Demo Pictures/Main demo page before prediction.png" alt="Screenshot">
+</p>
+  
+> After predicting Dialect
+  
+ <p align="center">
+  <img src="Demo Pictures/After prediction.png" alt="Screenshot">
+</p>
+  
+> Publications
+  
+ <p align="center">
+  <img src="Demo Pictures/Publications Page.png" alt="Screenshot">
+</p>
 
 >[!NOTE]
 >#### 🛠Built With
