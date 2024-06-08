@@ -63,14 +63,18 @@ if (form) {
             // document.getElementById('result').textContent = JSON.stringify(result, null, 2);
         } catch (error) {
             console.error('Error:', error);
-            // Display pop-up only if the error is a 404
-            if (error.message.includes('404')) {
-                displaySocketError();
-            }
             // Proceed with normal processing for other errors
         }
     });
 }
+
+// Display pop-up for any kind of error onclick of the button
+document.addEventListener('click', function(event) {
+    const target = event.target;
+    if (target.tagName === 'BUTTON' && target.textContent === 'Okay') {
+        displaySocketError();
+    }
+});
 
 function displaySocketError() {
     // Create a pop-up container
