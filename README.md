@@ -46,6 +46,12 @@ Dialect of a speech utterance acts as a virtual geo-tag for the utterance that h
 
 <p align="right">(<a href="#top">⬆️</a>)</p>
 
+## Model weights
+
+## Model Architecture
+We use [wav2vec2].(https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) for feature extraction.
+
+#Tutorials
 <!-- GETTING STARTED -->
 
 ## Getting Started
@@ -88,8 +94,17 @@ If you want to get a local copy of this app.
 
 7. The site is hosted now on specified port as per Flask cnofig.
     
-<p align="right">(<a href="#top">⬆️</a>)</p>
 
+<p align="right">(<a href="#top">⬆️</a>)</p>
+# Limitation
+These models are trained are trained on a number of Indian Languages for a variety of dialects. Therefore, these models may fail in the following conditions.
+
+- Presence of unfamiliar dialects and accents.
+- Presence of high domain mismatch.
+- Contains too much noise and unclear speech.
+- Does not belong to the dialects of Puneri or Marawadi in Marathi Language.
+- Note: Please follow the corresponding Readme.md file for more details.
+<p align="right">(<a href="#top">⬆️</a>)</p>
 <!-- CONTACT -->
 
 ## Contact
@@ -100,21 +115,13 @@ Project Link: [NLTM-NITGOA](#)
 
 <p align="right">(<a href="#top">⬆️</a>)</p>
 
-## Note: Please follow the corresponding Readme.md file for more details.
-
-# Limitation
-These models are trained are trained on a number of Indian Languages for a variety of dialects. Therefore, these models may fail in the following conditions.
-
-- Presence of high domain mismatch.
-- Contains too much noise and unclear speech.
-- Does not belong to the dialects of Puneri or Marawadi in Marathi Language.
-
 # Acknowledgement
 
 This work is performed with the support of the project named "Speech Technologies In Indian Languages". It is part of the NLTM (National Language Technology Mission) consortium project which is sponsored by Meity (Ministry of Electronics and Information Technology), India.
 
+<p align="right">(<a href="#top">⬆️</a>)</p>
 
-# License
+## License
 
 This project is licensed under the NLTM License - see the [LICENSE](LICENSE) file for details.
 <p align="right">(<a href="#top">⬆️</a>)</p>
