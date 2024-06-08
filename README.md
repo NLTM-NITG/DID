@@ -12,24 +12,20 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## 📝About The Project
+<h2> 📝About The Project </h2>
 
-![Screenshot]()
+<p align="center">
+  <img src="static/assets/img/bg-masthead.jpeg" alt="Screenshot">
+</p>
 <br /> <br />
 <p style="text-align: justify;">
 The focus of the work at <a href="https://www.nitgoa.ac.in/">National Institute of Technology Goa</a> is on Spoken Language Identification with a focus on development of Dialect Identification System. The task of spoken language identification (LID) involves automatically identifying the language in which a given speech utterance was spoken. An important aspect of a spoken language is its dialects. Dialects of a given language are differences in speaking style of the first language or native language (L1) because of geographical and ethnic differences.
 </p>
 
-<h2>Features</h2>
-
-<p style="text-align: justify;">
-India exhibits unity in diversity not only in culture and religion but also in languages spoken by people. Language plays a vital role in communication among people as well as in accessing information and building an inclusive society. India is home to 22 constitutionally recognized languages. However, there exist more than 1000 spoken languages in India. In this information era, it is important to ensure that a spoken language gets due representation in digital space.
-</p>
-
 <h2>Development of Dialect Identification System</h2>
 
 <p style="text-align: justify;">
-Dialect of a speech utterance acts as a virtual geo-tag for the utterance that helps in predicting the geographical location to which a speaker belongs. The dialectal variations of a spoken Indian language are a matter of concern for any automatic processing of speech utterances from that language. The project aims at addressing the issues of identifying the dialect in the conversational speech of the Indian languages. Dialect identification is difficult when compared to LID due to high interclass similarity among the dialects of a language. Very little work is done on dialect identification in Indian languages except Hindi. We also propose to explore deep learning methods for the dialect identification task.
+Dialect of a speech utterance acts as a virtual geo-tag for the utterance that helps in predicting the geographical location to which a speaker belongs. The dialectal variations of a spoken Indian language are a matter of concern for any automatic processing of speech utterances from that language. The project aims at addressing the issues of identifying the dialect in the conversational speech of the Indian languages. Dialect identification is difficult when compared to LID due to high interclass similarity among the dialects of a language. We also propose to explore deep learning methods for the dialect identification task.
 </p>
 
 <p align="right">(<a href="#top">⬆️</a>)</p>
@@ -78,17 +74,19 @@ If you want to get a local copy of this app.
     # Installing backend dependencies
     pip install numpy pandas torch librosa ipython sklearn flask flask_cors
     ```
-5. To host the website, there are three steps: First `Install all the dependencies in Step 3`, secondly `Install all the dependencies as per requirements.txt` and finally `Run the server`.<br/>
+5. To host the website, there are three steps:
+- **Step 1:** Begin by installing all necessary dependencies outlined in Step 3.
+- **Step 2:** Proceed to install the required dependencies according to the specifications outlined in `requirements.txt`.
+- **Step 3:** Initiate the server by executing the relevant command.
+
   
-6. Run the following command to start the backend
+6. Run the following command to start the website with backend capabilities
     ```sh
-    # To go into the Backend Folder
-    cd Backend/
     # Run the server
     python app.py
     ```
 
-7. The site is hosted now on specified port.
+7. The site is hosted now on specified port as per Flask cnofig.
     
 <p align="right">(<a href="#top">⬆️</a>)</p>
 
@@ -96,7 +94,7 @@ If you want to get a local copy of this app.
 
 ## Contact
 
-LinkedIn: [EvanderDS](https://www.linkedin.com/in/evanderds/)
+LinkedIn:     [EvanderDS](https://www.linkedin.com/in/evanderds/)
 <br>
 Project Link: [NLTM-NITGOA](#)
 
