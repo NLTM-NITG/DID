@@ -55,12 +55,19 @@ if (form) {
                 method: 'POST',
                 body: formData
             });
+            if (!response.ok) {
+                // If response is not OK (status code other than 2xx), throw an error
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
             const result = await response.json();
             // document.getElementById('result').textContent = JSON.stringify(result, null, 2);
         } catch (error) {
             console.error('Error:', error);
-            // Show pop-up for socket error
-            displaySocketError();
+            // Display pop-up only if the error is a 404
+            if (error.message.includes('404')) {
+                displaySocketError();
+            }
+            // Proceed with normal processing for other errors
         }
     });
 }
@@ -94,4 +101,5 @@ function displaySocketError() {
     // Append the pop-up container to the body
     document.body.appendChild(popUpContainer);
 }
+
 });
