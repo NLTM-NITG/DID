@@ -46,6 +46,9 @@ Our model's validity is assessed using a range of metrics. For more information,
 
 ### Website 
 
+>[!Note]
+> Requires server for backend services
+
 <strong>[View Deployment](https://nltm-nitg.github.io/Dialect-Identification/)</strong>
 
 ### Demo screenshots
