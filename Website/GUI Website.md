@@ -32,6 +32,14 @@
   <img src="Demo Pictures/Publications Page.png" alt="Screenshot">
 </p>
 
+<!-- GETTING STARTED -->
+
+## Tutorials
+
+### Getting Started
+
+You can just visit [NIT_GOA](https://nltm-nitg.github.io/Dialect-Identification/) page for using this app.
+
 >[!NOTE]
 >#### 🛠Built With
 >
@@ -46,19 +54,17 @@
 >    ![NumPy](https://img.shields.io/badge/-NumPy-333333?style=flat&logo=numpy)
 >    ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
 
-<!-- GETTING STARTED -->
 
-## Tutorials
+### ⚙Prerequisites
 
-### Getting Started
+1. There is no such complicated prerequisites for using this app except for `using modern browsers`. But if you are using it locally you will need `python3` and `nodejs>=16.0` and you will have to install some packages.
+2. To host the Backend, we need to install some packages via `pip`. Hence, run the following command. (Note: use `Python 3` only)
+   
+```sh
+pip install -r requirements.txt
+```
 
-You can just visit [NIT_GOA](https://nltm-nitg.github.io/Dialect-Identification/) page for using this app.
-
-### Prerequisites
-
-There is no such complicated prerequisites for using this app except for `using modern browsers`. But if you are using it locally you will need `python3` and `nodejs>=16.0` and you will have to install some packages.
-
-### ⚙Installation
+### Installation
 
 If you want to get a local copy of this app.
 
@@ -70,31 +76,26 @@ If you want to get a local copy of this app.
     ```sh
     cd Dialect_Identification/Website
     ```
-3. To host the Backend, we need to install some packages via `pip`. Hence, run the following command. (Note: use `Python 3` only)
+3. Download the models [wave2vec2-ASR](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/wav2vec2_model.pth) and [Model_Marathi](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/Model_Marathi.pth) and move then to the same directory as '''app.py'''
 
-    ```sh
-    # Installing backend dependencies
-    pip install numpy pandas torch librosa ipython sklearn flask flask_cors
-    ```
-5. To host the website, there are three steps:
-- **Step 1:** Begin by installing all necessary dependencies outlined in Step 3.
-- **Step 2:** Proceed to install the required dependencies according to the specifications outlined in `requirements.txt`.
-- **Step 3:** Initiate the server by executing the relevant command.
-
-6. Download the wave2vec2-ASR Large Model.
-  
-7. Run the following command to start the website with backend capabilities
+4. Run the following command to start the website with backend capabilities
+   
     ```sh
     # Run the server
     python app.py
     ```
 
-8. The site is hosted now on specified port as per Flask cnofig.
+8. The site is hosted now on specified port as per Flask config.
 
-### Fine-tuning and inference pipeline
+### Fine-tuning and Inference pipeline
 
-> You can use the inference pipeline for [wav2vec2](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) feature extraction through this link.
+## Inference
+You can use the pipeline for [wav2vec2](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) feature extraction or follow the [CLI instructions](https://github.com/NLTM-NITG/Dialect-Identification?tab=readme-ov-file#command-line-interface-cli).
 
-1. Please download the model onto your local systeam. place the CSNET, LSTM and U-vec model code into your .py file.
-2. Extract the features using wave2vece facebook model found here.
-3. Pass features through this model and use it.
+## Fine tuning for other Dialects
+1. Please download the website onto your local system.
+2. Change the label values pertaining to the dialects to be used in app.py.
+3. Retrain the model based in CSNET, LSTM and U-vec model on your training data.
+4. Place this new model link into the Model path.
+5. For testing locally run the app.py or CLI instructions.
+   
