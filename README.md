@@ -28,19 +28,23 @@ Dialect of a speech utterance acts as a virtual geo-tag for the utterance that h
 
 ### Architecture
 
-We use two models in unison for Dialect Identification. A feature extractor and then our predictor model.
+In our Dialect Identification system, we employ a tandem approach, leveraging two distinct models: a feature extractor and a predictor model.
 
-Our feature Extractor is a wav2vec2 model hosted on HuggingFace and developed by Facebook [Link.](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) <br>
-Predictor: U-vector model as defined in Sean Monteiro, Ananya Angra, Muralikrishna H, Veena Thenkanidiyoor, and A. D. Dileep, Exploring the Impact of Different Approaches for Spoken Dialect Identification of Konkani Language, in Proceedings of 25th International Conference on Speech and Computer (SPECOM-2023), November-December 2023 [Link.](https://dblp.org/db/conf/specom/specom2023-2.html)
+1. Feature Extractor: </br>
+Our feature extractor is based on the [wav2vec2](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/wav2vec2_model.pth) architecture, which is hosted on HuggingFace and developed by Facebook. This model is specifically designed for extracting high-quality acoustic features from raw audio data. For more details on the wav2vec2 model, please refer to the documentation provided by [HuggingFace here.](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) 
 
+2. Predictor Model: </br>
+The predictor model utilized in our system is a U-vector model, as defined in the research paper titled "Exploring the Impact of Different Approaches for Spoken Dialect Identification of Konkani Language" by Sean Monteiro et al. This model has been developed to effectively identify dialects in spoken language, with particular focus on the Konkani language. For further insights into this model and its methodologies, you can refer to the publication available [here.](https://dblp.org/db/conf/specom/specom2023-2.html)
+
+By integrating these two models, our Dialect Identification system achieves robust performance in accurately identifying dialects across various Indian languages, including Marathi, Konkani, Tamil, Kannada, and others.
 
 ### Weights
 
-The model weights are stored as a .pth file, accessible via the link provided: [DID Model](). These weights represent the learned parameters of the language model based on the dialects of numerous Indian languages like Marathi, Konkani, Tamil, Kannada etc.
+The model weights are stored as a .pth file. These weights encapsulate the learned parameters of the [Dialect model](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/Model_Marathi.pth), which have been derived from an extensive dataset encompassing various Indian languages such as Marathi, Konkani, Tamil, Kannada, and others.
 
 ### Benchmark details
 
-Our model's validity is assessed using a range of metrics. For more information, refer to the document linked here: [Benchmark]().
+Our model's validity is assessed using a range of [metrics](https://scikit-learn.org/stable/modules/model_evaluation.html), particularly Confusion Matrix, Accuracy, True Positive Rate (Recall), False Positive Rate, False Negative Rate, Precision, F1 Score, and Equal Error Rate (EER).
 
 ## Demo 
 ### Command Line Interface (CLI) 
@@ -51,24 +55,18 @@ The Dialect Identification system comprises a Graphical User Interface (GUI) web
 
 
 #### **Setup**
-Clone the Repository: Obtain the system source code by cloning the repository from GitHub:
+1. Clone the Repository: Obtain the system source code by cloning the repository from GitHub:
 
 ```sh
 git clone https://github.com/NLTM-NITG/Dialect-Identification
 ```
     
-Navigate to the CLI Directory: Access the Command Line Interface directory within the cloned repository:
+2. Navigate to the CLI Directory: Access the Command Line Interface directory within the cloned repository:
 
 ```sh
 cd Dialect-Identification/CLI
 ```
-<p align="center">
-  <span style="background-color: white; padding: 0 10px;">(OR)</span>
-</p>
 
-Download the script present in the folder titled Demo.py.
-
- 
 #### **Running the CLI Scripts**
 
 To predict the Dialect of audio files using the Command Line Interface, execute the following command:
@@ -89,13 +87,13 @@ Replace `<path/to/audio_file_or_directory>` with the path to the audio file or d
 
 ####  **Performance Metrics Calculation**
 
-To calculate performance metrics such as Confusion Matrix, Accuracy, True Positive Rate (Recall), False Positive Rate, False Negative Rate, Precision, F1 Score, and Equal Error Rate (EER), follow these steps:
+To calculate performance metrics follow these steps:
 
 
-Add Actual Language Labels: Ensure that the actual language labels of each file are included in the `Predicted_Dialect.csv` file under the column named `Dialect`.
+1. Add Actual Language Labels: Ensure that the actual language labels of each file are included in the `Predicted_Dialect.csv` file under the column named `Dialect`.
 
 
-Run the Performance Metrics Script: Execute the `Prediction_Metrics.py` script with the following command:
+2. Run the Performance Metrics Script: Execute the `Prediction_Metrics.py` script with the following command:
 
 ```sh
 python Prediction_Metrics.py --CSV_File_Name <path/to/Predicted_Dialect.csv>
@@ -106,7 +104,7 @@ Replace `<path/to/Predicted_Dialect.csv>` with the path to the `Predicted_Dialec
 
 #### **Output**
 
-The script will produce the calculated performance metrics, which will be displayed in the console.
+- The script will produce the calculated [performance metrics](https://github.com/NLTM-NITG/Dialect-Identification/tree/main?tab=readme-ov-file#benchmark-details), which will be displayed in the console.
 
 <hr>
 
@@ -115,6 +113,7 @@ The script will produce the calculated performance metrics, which will be displa
 <strong>[View Deployment](https://nltm-nitg.github.io/Dialect-Identification/)</strong>
 
 For more information : [NIT Goa - Dialect Identification Website](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/GUI%20Website.md#gui-websites-screenshots)
+
 >[!NOTE]
 >#### 🛠Built With
 >
@@ -156,6 +155,5 @@ This project is licensed under the [NLTM Creative Commons CC-BY-4 LICENSE](LICEN
 
 This work is performed with the support of the project named "Speech Technologies In Indian Languages". It is part of the NLTM (National Language Technology Mission) consortium project which is sponsored by Meity (Ministry of Electronics and Information Technology), India.
 
-<p align="right">(<a href="#top">⬆️</a>)</p>
 
 
