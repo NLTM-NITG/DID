@@ -43,15 +43,76 @@ The model weights are stored as a .pth file, accessible via the link provided: [
 Our model's validity is assessed using a range of metrics. For more information, refer to the document linked here: [Benchmark]().
 
 ## Demo 
+### Command Line Interface (CLI) 
 
-### Website 
+#### Overview
+The Dialect Identification system comprises a Graphical User Interface (GUI) website and a Command Line Interface (CLI) designed for identifying the Dialect of spoken audio utilizing a u-vector model. The GUI facilitates various tasks such as audio recording, playback of saved audio files, and Dialect identification of spoken audio. On the other hand, the CLI enables users to predict the Dialect of individual audio files or directories containing multiple audio files.
 
->[!Note]
-> Requires server for backend services
+
+#### Setup
+Clone the Repository: Obtain the system source code by cloning the repository from GitHub:
+
+```sh
+     git clone https://github.com/NLTM-NITG/Dialect-Identification
+```
+    
+Navigate to the CLI Directory: Access the Command Line Interface directory within the cloned repository:
+    ```sh
+   cd Dialect-Identification/CLI
+   '''
+
+(OR)
+
+
+Download the script present in the folder titled Demo.py.
+
+
+  
+#### Running the CLI Scripts
+To predict the Dialect of audio files using the Command Line Interface, execute the following command:
+   
+   ```sh
+   python demo.py <path/to/audio_file_or_directory>
+   ```
+   
+Replace `<path/to/audio_file_or_directory>` with the path to the audio file or directory containing audio files with the '.wav' extension.
+
+
+#### Output
+- If a directory is specified, the predicted languages for each audio file will be displayed in the console.
+- A CSV file named `Predicted_Dialect.csv` will be generated in the current directory, containing the audio filename and predicted language for each audio file.
+
+
+####  Performance Metrics Calculation
+To calculate performance metrics such as Confusion Matrix, Accuracy, True Positive Rate (Recall), False Positive Rate, False Negative Rate, Precision, F1 Score, and Equal Error Rate (EER), follow these steps:
+
+
+Add Actual Language Labels: Ensure that the actual language labels of each file are included in the `Predicted_Dialect.csv` file under the column named `Dialect`.
+
+
+Run the Performance Metrics Script: Execute the `Prediction_Metrics.py` script with the following command:
+
+   ```sh
+   python Prediction_Metrics.py --CSV_File_Name <path/to/Predicted_Dialect.csv>
+   ```
+
+Replace `<path/to/Predicted_Dialect.csv>` with the path to the `Predicted_Dialect.csv` file containing the predicted language labels.
+
+
+#### Output
+The script will produce the calculated performance metrics, which will be displayed in the console.
+
+
+#### Additional Notes
+- Detailed documentation for the system can be found on the GitHub repository.
+- Ensure that the spoken audio has a minimum duration of around 2-4 seconds for accurate Dialect identification.
+
+
+### GUI Website 
 
 <strong>[View Deployment](https://nltm-nitg.github.io/Dialect-Identification/)</strong>
 
-### Demo screenshots
+### GUI Websites screenshots
 
 > Landing Page
   
@@ -96,7 +157,6 @@ Our model's validity is assessed using a range of metrics. For more information,
 >    ![Flask](https://img.shields.io/badge/-Flask-333333?style=flat&logo=flask)
 >    ![NumPy](https://img.shields.io/badge/-NumPy-333333?style=flat&logo=numpy)
 >    ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
-
 
 ## Tutorials
 
@@ -152,17 +212,13 @@ These models are trained are trained on a number of Indian Languages for a varie
 - Does not belong to the dialects of Puneri or Marawadi in Marathi Language.
 - Note: Please follow the corresponding Readme.md file for more details.
 
-### Fine tuning and inference pipeline
+### Fine-tuning and inference pipeline
 
-> You can use the inference pipeline for [wav2vec2](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) through this link.
+> You can use the inference pipeline for [wav2vec2](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) feature extraction through this link.
 
 1. Please download the model onto your local systeam. place the CSNET, LSTM and U-vec model code into your .py file.
 2. Extract the features using wave2vece facebook model found here.
-3. Pass feaatures through this model and use it.
-
-For finetuning
->[!WARNING]
->Yet to add the script
+3. Pass features through this model and use it.
 
 <!-- CONTACT -->
 
