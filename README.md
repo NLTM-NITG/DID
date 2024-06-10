@@ -8,7 +8,7 @@
 ## Dialect Identification for Indian Languages
 
 <p align="center">
-  <img src="static/assets/img/bg-masthead.jpeg" alt="Screenshot">
+  <img src="Website/static/assets/img/bg-masthead.jpeg" alt="Screenshot">
 </p>
 
 
@@ -34,7 +34,7 @@ In our Dialect Identification system, we employ a tandem approach, leveraging tw
 Our feature extractor is based on the [wav2vec2 architecture](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/wav2vec2_model.pth), which is hosted on HuggingFace and developed by Facebook. This model is specifically designed for extracting high-quality acoustic features from raw audio data. For more details on the wav2vec2 model, please refer to the documentation provided by [HuggingFace here.](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) 
 
 2. Predictor Model: </br>
-The predictor model utilized in our system is a U-vector model, as defined in the research paper titled "Exploring the Impact of Different Approaches for Spoken Dialect Identification of Konkani Language" by Sean Monteiro et al. This model has been developed to effectively identify dialects in spoken language, with particular focus on the Konkani language. For further insights into this model and its methodologies, you can refer to the publication available [here.](https://dblp.org/db/conf/specom/specom2023-2.html)
+The predictor model utilized in our system is a U-vector model, as defined in the research paper titled "Exploring the Impact of Different Approaches for Spoken Dialect Identification of Konkani Language" by Sean Monteiro et al. This model has been developed to effectively identify dialects in spoken language, with particular focus on the Konkani language. For further insights into this model and its methodologies, you can refer to the [publication.](https://dblp.org/db/conf/specom/specom2023-2.html)
 
 By integrating these two models, our Dialect Identification system achieves robust performance in accurately identifying dialects across various Indian languages, including Marathi, Konkani, Tamil, Kannada, and others.
 
@@ -112,7 +112,7 @@ Replace `<path/to/Predicted_Dialect.csv>` with the path to the `Predicted_Dialec
 
 <strong>[View Deployment](https://nltm-nitg.github.io/Dialect-Identification/)</strong>
 
-For more information : [NIT Goa - Dialect Identification Website](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/GUI%20Website.md#gui-websites-screenshots)
+For more information : [NIT Goa - Dialect Identification Website](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/Website/GUI%20Website.md)
 
 >[!NOTE]
 >#### 🛠Built With
