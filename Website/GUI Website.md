@@ -1,4 +1,6 @@
-### GUI Websites screenshots
+# NLTM - National Institute of Technology Goa | Dialect Identification
+
+## Screenshots
 
 > Landing Page
   
@@ -44,13 +46,13 @@
 >    ![NumPy](https://img.shields.io/badge/-NumPy-333333?style=flat&logo=numpy)
 >    ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
 
-## Tutorials
-
 <!-- GETTING STARTED -->
+
+## Tutorials
 
 ### Getting Started
 
-You can just visit [NIT_GOA](#) page for using this app.
+You can just visit [NIT_GOA](https://nltm-nitg.github.io/Dialect-Identification/) page for using this app.
 
 ### Prerequisites
 
@@ -62,11 +64,11 @@ If you want to get a local copy of this app.
 
 1. Clone the repo
     ```sh
-    git clone https://github.com/NLTM-NITG/DID.git
+    git clone https://github.com/NLTM-NITG/Dialect-Identification.git
     ```
-2. Navigate to the folder `NLTM_NIT_GOA`
+2. Navigate to the folder `Website`
     ```sh
-    cd Dialect_Identification
+    cd Dialect_Identification/Website
     ```
 3. To host the Backend, we need to install some packages via `pip`. Hence, run the following command. (Note: use `Python 3` only)
 
