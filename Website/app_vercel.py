@@ -156,9 +156,9 @@ def projects():
 def contact():
     return send_from_directory('static', 'contact.html')
 
-@app.route('/update.html')
+@app.route('/update_vercel.html')
 def demo():
-    return render_template('update.html')
+    return render_template('update_vercel.html')
 
 @app.route('/favicon.ico')
 def favicon():
