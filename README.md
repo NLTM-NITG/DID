@@ -44,46 +44,51 @@ Our model's validity is assessed using a range of metrics. For more information,
 
 ## Demo 
 ### Command Line Interface (CLI) 
+<hr>
 
 #### Overview
 The Dialect Identification system comprises a Graphical User Interface (GUI) website and a Command Line Interface (CLI) designed for identifying the Dialect of spoken audio utilizing a u-vector model. The GUI facilitates various tasks such as audio recording, playback of saved audio files, and Dialect identification of spoken audio. On the other hand, the CLI enables users to predict the Dialect of individual audio files or directories containing multiple audio files.
 
 
-#### Setup
+#### **Setup**
 Clone the Repository: Obtain the system source code by cloning the repository from GitHub:
 
 ```sh
-     git clone https://github.com/NLTM-NITG/Dialect-Identification
+git clone https://github.com/NLTM-NITG/Dialect-Identification
 ```
     
 Navigate to the CLI Directory: Access the Command Line Interface directory within the cloned repository:
-    ```sh
-   cd Dialect-Identification/CLI
-   '''
 
-(OR)
-
+```sh
+cd Dialect-Identification/CLI
+```
+<p align="center">
+  <span style="background-color: white; padding: 0 10px;">(OR)</span>
+</p>
 
 Download the script present in the folder titled Demo.py.
 
+ 
+#### **Running the CLI Scripts**
 
-  
-#### Running the CLI Scripts
 To predict the Dialect of audio files using the Command Line Interface, execute the following command:
    
-   ```sh
-   python demo.py <path/to/audio_file_or_directory>
-   ```
+```sh
+python demo.py <path/to/audio_file_or_directory>
+```
    
 Replace `<path/to/audio_file_or_directory>` with the path to the audio file or directory containing audio files with the '.wav' extension.
 
 
-#### Output
+#### **Output**
+
 - If a directory is specified, the predicted languages for each audio file will be displayed in the console.
 - A CSV file named `Predicted_Dialect.csv` will be generated in the current directory, containing the audio filename and predicted language for each audio file.
 
+<hr>
 
-####  Performance Metrics Calculation
+####  **Performance Metrics Calculation**
+
 To calculate performance metrics such as Confusion Matrix, Accuracy, True Positive Rate (Recall), False Positive Rate, False Negative Rate, Precision, F1 Score, and Equal Error Rate (EER), follow these steps:
 
 
@@ -92,58 +97,24 @@ Add Actual Language Labels: Ensure that the actual language labels of each file 
 
 Run the Performance Metrics Script: Execute the `Prediction_Metrics.py` script with the following command:
 
-   ```sh
-   python Prediction_Metrics.py --CSV_File_Name <path/to/Predicted_Dialect.csv>
-   ```
+```sh
+python Prediction_Metrics.py --CSV_File_Name <path/to/Predicted_Dialect.csv>
+```
 
 Replace `<path/to/Predicted_Dialect.csv>` with the path to the `Predicted_Dialect.csv` file containing the predicted language labels.
 
 
-#### Output
+#### **Output**
+
 The script will produce the calculated performance metrics, which will be displayed in the console.
 
-
-#### Additional Notes
-- Detailed documentation for the system can be found on the GitHub repository.
-- Ensure that the spoken audio has a minimum duration of around 2-4 seconds for accurate Dialect identification.
-
+<hr>
 
 ### GUI Website 
 
 <strong>[View Deployment](https://nltm-nitg.github.io/Dialect-Identification/)</strong>
 
-### GUI Websites screenshots
-
-> Landing Page
-  
-<p align="center">
-  <img src="Demo Pictures/Landing Page.png" alt="Screenshot">
-</p>
-
-> Predicting Dialect
-  
- <p align="center">
-  <img src="Demo Pictures/Main Demo Page.png" alt="Screenshot">
-</p>
-
-> Before predicting Dialect
-
- <p align="center">
-  <img src="Demo Pictures/Main demo page before prediction.png" alt="Screenshot">
-</p>
-  
-> After predicting Dialect
-  
- <p align="center">
-  <img src="Demo Pictures/After prediction.png" alt="Screenshot">
-</p>
-  
-> Publications
-  
- <p align="center">
-  <img src="Demo Pictures/Publications Page.png" alt="Screenshot">
-</p>
-
+For more information : [NIT Goa - Dialect Identification Website](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/GUI%20Website.md#gui-websites-screenshots)
 >[!NOTE]
 >#### 🛠Built With
 >
@@ -158,51 +129,9 @@ The script will produce the calculated performance metrics, which will be displa
 >    ![NumPy](https://img.shields.io/badge/-NumPy-333333?style=flat&logo=numpy)
 >    ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
 
-## Tutorials
+<hr>
 
-<!-- GETTING STARTED -->
-
-### Getting Started
-
-You can just visit [NIT_GOA](#) page for using this app.
-
-### Prerequisites
-
-There is no such complicated prerequisites for using this app except for `using modern browsers`. But if you are using it locally you will need `python3` and `nodejs>=16.0` and you will have to install some packages.
-
-### ⚙Installation
-
-If you want to get a local copy of this app.
-
-1. Clone the repo
-    ```sh
-    git clone https://github.com/NLTM-NITG/DID.git
-    ```
-2. Navigate to the folder `NLTM_NIT_GOA`
-    ```sh
-    cd Dialect_Identification
-    ```
-3. To host the Backend, we need to install some packages via `pip`. Hence, run the following command. (Note: use `Python 3` only)
-
-    ```sh
-    # Installing backend dependencies
-    pip install numpy pandas torch librosa ipython sklearn flask flask_cors
-    ```
-5. To host the website, there are three steps:
-- **Step 1:** Begin by installing all necessary dependencies outlined in Step 3.
-- **Step 2:** Proceed to install the required dependencies according to the specifications outlined in `requirements.txt`.
-- **Step 3:** Initiate the server by executing the relevant command.
-
-6. Download the wave2vec2-ASR Large Model.
-  
-7. Run the following command to start the website with backend capabilities
-    ```sh
-    # Run the server
-    python app.py
-    ```
-
-8. The site is hosted now on specified port as per Flask cnofig.
-    
+   
 ### Limitation
 These models are trained are trained on a number of Indian Languages for a variety of dialects. Therefore, these models may fail in the following conditions.
 
@@ -210,18 +139,10 @@ These models are trained are trained on a number of Indian Languages for a varie
 - Presence of high domain mismatch.
 - Contains too much noise and unclear speech.
 - Does not belong to the dialects of Puneri or Marawadi in Marathi Language.
-- Note: Please follow the corresponding Readme.md file for more details.
+- Minimum duration of audio is not around 2-4 seconds for accurate Dialect identification.
 
-### Fine-tuning and inference pipeline
-
-> You can use the inference pipeline for [wav2vec2](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) feature extraction through this link.
-
-1. Please download the model onto your local systeam. place the CSNET, LSTM and U-vec model code into your .py file.
-2. Extract the features using wave2vece facebook model found here.
-3. Pass features through this model and use it.
 
 <!-- CONTACT -->
-
 ## License
 
 This project is licensed under the [NLTM Creative Commons CC-BY-4 LICENSE](LICENSE) file for details.
