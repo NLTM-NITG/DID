@@ -1,16 +1,39 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
+    let fetchLogsInterval;
+
     async function fetchLogs() {
         const response = await fetch('/logs');
         const logs = await response.json();
         const logDiv = document.getElementById('log');
-        logDiv.innerHTML = ''; // Clear previous logs
         logs.forEach(log => {
             const message = document.createElement('p');
             message.textContent = log;
             logDiv.appendChild(message);
         });
     }
+
+    // Start fetching logs when form is submitted
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const response = await fetch('/extract_features', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            // Start fetching logs
+            fetchLogsInterval = setInterval(fetchLogs, 1000);  // Fetch logs every second
+            // document.getElementById('result').textContent = JSON.stringify(result, null, 2);
+        });
+    }
+
+    // Stop fetching logs when the extraction process is finished
+    document.addEventListener('extractFeaturesFinished', () => {
+        clearInterval(fetchLogsInterval);
+    });
 
     // Add event listener for replay button
     const replayBtn = document.getElementById('replay-btn');
@@ -34,21 +57,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById('file-name').textContent = 'Uploaded File: ' + fileName;
         });
     }
-
-    const form = document.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', async function (event) {
-            event.preventDefault();
-            const formData = new FormData(this);
-            const response = await fetch('/extract_features', {
-                method: 'POST',
-                body: formData
-            });
-            const result = await response.json();
-            // document.getElementById('result').textContent = JSON.stringify(result, null, 2);
-        });
-    }
-
-    setInterval(fetchLogs, 1000);  // Fetch logs every second
 
 });
