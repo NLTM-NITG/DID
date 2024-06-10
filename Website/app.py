@@ -132,7 +132,7 @@ def load_models():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     model_wav2vec = bundle.get_model()
-    model_wav2vec.load_state_dict(torch.load('wav2vec2_model.pth', map_location=device))
+    model_wav2vec.load_state_dict(torch.load('../wav2vec2_model.pth', map_location=device))
     model_wav2vec = model_wav2vec.to(device)
     model_wav2vec.eval()
     print("Modelwav2vec2 is loaded")
@@ -140,7 +140,7 @@ def load_models():
     model1 = LSTMNet()
     model2 = LSTMNet()
     Model_Marathi = CCSL_Net(model1, model2)
-    Model_Marathi.load_state_dict(torch.load('Marathi_Model.pth', map_location=device))
+    Model_Marathi.load_state_dict(torch.load('../Marathi_Model.pth', map_location=device))
     Model_Marathi.eval()
 
     # Seed for reproducibility
