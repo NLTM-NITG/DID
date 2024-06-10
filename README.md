@@ -31,7 +31,7 @@ Dialect of a speech utterance acts as a virtual geo-tag for the utterance that h
 In our Dialect Identification system, we employ a tandem approach, leveraging two distinct models: a feature extractor and a predictor model.
 
 1. Feature Extractor: </br>
-Our feature extractor is based on the [wav2vec2](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/wav2vec2_model.pth) architecture, which is hosted on HuggingFace and developed by Facebook. This model is specifically designed for extracting high-quality acoustic features from raw audio data. For more details on the wav2vec2 model, please refer to the documentation provided by [HuggingFace here.](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) 
+Our feature extractor is based on the [wav2vec2 architecture](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/wav2vec2_model.pth), which is hosted on HuggingFace and developed by Facebook. This model is specifically designed for extracting high-quality acoustic features from raw audio data. For more details on the wav2vec2 model, please refer to the documentation provided by [HuggingFace here.](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) 
 
 2. Predictor Model: </br>
 The predictor model utilized in our system is a U-vector model, as defined in the research paper titled "Exploring the Impact of Different Approaches for Spoken Dialect Identification of Konkani Language" by Sean Monteiro et al. This model has been developed to effectively identify dialects in spoken language, with particular focus on the Konkani language. For further insights into this model and its methodologies, you can refer to the publication available [here.](https://dblp.org/db/conf/specom/specom2023-2.html)
