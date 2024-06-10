@@ -47,6 +47,29 @@ The model weights are stored as a .pth file. These weights encapsulate the learn
 Our model's validity is assessed using a range of [metrics](https://scikit-learn.org/stable/modules/model_evaluation.html), particularly Confusion Matrix, Accuracy, True Positive Rate (Recall), False Positive Rate, False Negative Rate, Precision, F1 Score, and Equal Error Rate (EER).
 
 ## Demo 
+
+### GUI Website 
+
+<strong>[View Deployment](https://nltm-nitg.github.io/Dialect-Identification/)</strong>
+
+For more information on Demo/Inference/Finetuning: [NIT Goa - Dialect Identification Website](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/Website/GUI%20Website.md)
+
+>[!NOTE]
+>#### 🛠Built With
+>
+>-   🌐 &nbsp; Frontend </br>
+>    ![HTML5](https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5)
+>    ![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
+>    ![JAVASCRIPT](https://img.shields.io/badge/-JS-333333?style=flat&logo=javascript)
+>-   🧾&nbsp; Backend </br>
+>    ![Python 3](https://img.shields.io/badge/-Python-333333?style=flat&logo=Python)
+>    ![PyTorch](https://img.shields.io/badge/-PyTorch-333333?style=flat&logo=pytorch)
+>    ![Flask](https://img.shields.io/badge/-Flask-333333?style=flat&logo=flask)
+>    ![NumPy](https://img.shields.io/badge/-NumPy-333333?style=flat&logo=numpy)
+>    ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
+
+
+
 ### Command Line Interface (CLI) 
 <hr>
 
@@ -105,28 +128,6 @@ Replace `<path/to/Predicted_Dialect.csv>` with the path to the `Predicted_Dialec
 #### **Output**
 
 - The script will produce the calculated [performance metrics](https://github.com/NLTM-NITG/Dialect-Identification/tree/main?tab=readme-ov-file#benchmark-details), which will be displayed in the console.
-
-<hr>
-
-### GUI Website 
-
-<strong>[View Deployment](https://nltm-nitg.github.io/Dialect-Identification/)</strong>
-
-For more information : [NIT Goa - Dialect Identification Website](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/Website/GUI%20Website.md)
-
->[!NOTE]
->#### 🛠Built With
->
->-   🌐 &nbsp; Frontend </br>
->    ![HTML5](https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5)
->    ![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
->    ![JAVASCRIPT](https://img.shields.io/badge/-JS-333333?style=flat&logo=javascript)
->-   🧾&nbsp; Backend </br>
->    ![Python 3](https://img.shields.io/badge/-Python-333333?style=flat&logo=Python)
->    ![PyTorch](https://img.shields.io/badge/-PyTorch-333333?style=flat&logo=pytorch)
->    ![Flask](https://img.shields.io/badge/-Flask-333333?style=flat&logo=flask)
->    ![NumPy](https://img.shields.io/badge/-NumPy-333333?style=flat&logo=numpy)
->    ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
 
 <hr>
 
