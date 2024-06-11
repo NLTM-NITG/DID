@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def check_imports():
     results = {}
-    packages = ['flask', 'requests', 'torch', 'torchvision', 'soundfile', 'torchaudio', 'numpy']
+    packages = ['flask', 'requests', 'numpy']
     for package in packages:
         try:
             exec(f"import {package}")
