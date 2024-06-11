@@ -71,6 +71,12 @@
             </ul>
         </div>
     </section>
+    <h1>Package Import Check</h1>
+    <ul>
+        {% for package, status in results.items() %}
+            <li><strong>{{ package }}:</strong> {{ status }}</li>
+        {% endfor %}
+    </ul>
     <section class="audio-section-container">
         <div class="container">
             <form action="/extract_features" method="post" enctype="multipart/form-data">
