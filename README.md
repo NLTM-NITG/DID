@@ -89,7 +89,12 @@ git clone https://github.com/NLTM-NITG/Dialect-Identification
 ```sh
 cd Dialect-Identification/CLI
 ```
-
+3. Install the requirements for CLI to run by running requirements_GUI.txt
+   
+```sh
+pip install requirements_GUI.txt
+```
+   
 #### **Running the CLI Scripts**
 
 To predict the Dialect of audio files using the Command Line Interface, execute the following command:
