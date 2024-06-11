@@ -69,23 +69,39 @@ pip install -r requirements_GUI.txt
 If you want to get a local copy of this app.
 
 1. Clone the repo
-    ```sh
-    git clone https://github.com/NLTM-NITG/Dialect-Identification.git
-    ```
-2. Navigate to the folder `Website`
-    ```sh
-    cd Dialect_Identification/Website
-    ```
-3. Download the models [wave2vec2-ASR](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/wav2vec2_model.pth) and [Model_Marathi](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/Model_Marathi.pth) and move then to the same directory as '''app.py'''
-
-4. Run the following command to start the website with backend capabilities
    
-    ```sh
-    # Run the server
-    python app.py
-    ```
+```sh
+git clone https://github.com/NLTM-NITG/Dialect-Identification.git
+```
+3. Navigate to the folder `Website`
 
-8. The site is hosted now on specified port as per Flask config.
+```sh
+cd Dialect_Identification/Website
+```
+4. Download the models [wave2vec2-ASR](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/wav2vec2_model.pth) and [Model_Marathi](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/Model_Marathi.pth) and move then to the same directory as `app.py`. 
+   
+```sh
+git mv <wave2vec2model/DialectModel/file/name.pth> <same/folder/as/app.py>
+```
+
+5. Ensure that the model paths are updated in `app.py`
+
+```sh
+#Wave2vec2 Model Path
+model_wav2vec.load_state_dict(torch.load('../wav2vec2_model.pth', map_location=device))
+
+#Dialect Model Path
+Model_Marathi.load_state_dict(torch.load('../Marathi_Model.pth', map_location=device))
+```
+
+7. Run the following command to start the website with backend capabilities
+   
+```sh
+# Run the server
+python app.py
+```
+
+7. The site is hosted now on specified port as per Flask config.
 
 ### Fine-tuning and Inference pipeline
 
