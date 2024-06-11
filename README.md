@@ -92,7 +92,7 @@ cd Dialect-Identification/CLI
 3. Install the requirements for CLI to run by running requirements_GUI.txt
    
 ```sh
-pip install requirements_GUI.txt
+pip install requirements_CLI.txt
 ```
    
 #### **Running the CLI Scripts**
