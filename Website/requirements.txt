@@ -1,7 +1,0 @@
-flask
-requests
-torch
-torchvision
-soundfile
-torchaudio
-numpy
