@@ -106,12 +106,10 @@ python app.py
 ### Fine-tuning and Inference pipeline
 
 ## Inference
-You can use the pipeline for [wav2vec2](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) feature extraction or follow the [CLI instructions](https://github.com/NLTM-NITG/Dialect-Identification?tab=readme-ov-file#command-line-interface-cli).
+You can use the pipeline for [wav2vec2](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) feature extraction or follow the [HuggingFace](https://huggingface.co/NLTM-NITG/Dialect_Identification_Indian_Languages_Marathi) or [CLI instructions](https://github.com/NLTM-NITG/Dialect-Identification?tab=readme-ov-file#command-line-interface-cli).
 
 ## Fine tuning for other Dialects
-1. Please download the website onto your local system.
-2. Change the label values pertaining to the dialects to be used in app.py.
-3. Retrain the model based in CSNET, LSTM and U-vec model on your training data.
-4. Place this new model link into the Model path.
-5. For testing locally run the app.py or CLI instructions.
+1. Please download the folder called HuggingFace onto your local system.
+2. Go to [HuggingFace](https://huggingface.co/NLTM-NITG/Dialect_Identification_Indian_Languages_Marathi) for more instructions.
+
    
