@@ -40,7 +40,7 @@ By integrating these two models, our Dialect Identification system achieves robu
 
 ### Weights
 
-The model weights are stored as a .pth file. These weights encapsulate the learned parameters of the [Dialect model](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/Model_Marathi.pth), which have been derived from an extensive dataset encompassing various Indian languages such as Marathi, Konkani, Tamil, Kannada, and others. See readme at [Huggingface](https://huggingface.co/NLTM-NITG/Dialect_Identification_Indian_Languages_Marathi/blob/main/Dialect_Identification_Indian_Languages_Marathi.pth) for precise information for each Indian language.
+The model weights are stored as a .pth file. These weights encapsulate the learned parameters of the [Dialect model](https://github.com/NLTM-NITG/Dialect-Identification/blob/main/Model_Marathi.pth), which have been derived from an extensive dataset encompassing various Indian languages such as Marathi, Konkani, Tamil, Kannada, and others. See readme at [HuggingFace](https://huggingface.co/NLTM-NITG/Dialect_Identification_Indian_Languages_Marathi/blob/main/Dialect_Identification_Indian_Languages_Marathi.pth) for precise information for each Indian language.
 
 ### Benchmark details
 
