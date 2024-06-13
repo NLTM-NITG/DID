@@ -47,7 +47,7 @@ The model weights are stored as a .pth file. These weights encapsulate the learn
 Our model's validity is assessed using a range of [metrics](https://scikit-learn.org/stable/modules/model_evaluation.html), particularly Confusion Matrix, Accuracy, True Positive Rate (Recall), False Positive Rate, False Negative Rate, Precision, F1 Score, and Equal Error Rate (EER).
 
 ## Demo 
-### Hugging Face
+### HuggingFace
 <hr>
 
 1. Download the models from [Github CLI](https://github.com/NLTM-NITG/Dialect-Identification/tree/main?tab=readme-ov-file#command-line-interface-cli) or [HuggingFace](https://huggingface.co/NLTM-NITG/Dialect_Identification_Indian_Languages_Marathi).
