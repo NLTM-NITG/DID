@@ -61,7 +61,7 @@ You can just visit [NIT_GOA](https://nltm-nitg.github.io/Dialect-Identification/
 2. To host the Backend, we need to install some packages via `pip`. Hence, run the following command. (Note: use `Python 3` only)
    
 ```sh
-pip install -r requirements_GUI.txt
+pip install -r requirements.txt
 ```
 
 ### Installation
