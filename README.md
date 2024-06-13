@@ -47,8 +47,17 @@ The model weights are stored as a .pth file. These weights encapsulate the learn
 Our model's validity is assessed using a range of [metrics](https://scikit-learn.org/stable/modules/model_evaluation.html), particularly Confusion Matrix, Accuracy, True Positive Rate (Recall), False Positive Rate, False Negative Rate, Precision, F1 Score, and Equal Error Rate (EER).
 
 ## Demo 
+### Hugging Face
+<hr>
+
+1. Download the models from [Github CLI](https://github.com/NLTM-NITG/Dialect-Identification/tree/main?tab=readme-ov-file#command-line-interface-cli) or [HuggingFace](https://huggingface.co/NLTM-NITG/Dialect_Identification_Indian_Languages_Marathi).
+2. Rename the paths to the models and to your corresponding audio file.
+3. Instance a model object: model = DID_Model().
+4. Load the weights for the model by running: model.load_weights(model_path).
+5. Predict the dialect through inference: model.predict_dialect(aud_path, wave2vec_model_path).
 
 ### GUI Website 
+<hr>
 
 <strong>[View Deployment](https://nltm-nitg.github.io/Dialect-Identification/)</strong>
 
