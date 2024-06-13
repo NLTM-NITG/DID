@@ -99,10 +99,10 @@ git clone https://github.com/NLTM-NITG/Dialect-Identification
 ```sh
 cd Dialect-Identification/CLI
 ```
-3. Install the requirements for CLI to run by running requirements_GUI.txt
+3. Install the requirements for CLI to run by running requirements.txt
    
 ```sh
-pip install requirements_CLI.txt
+pip install requirements.txt
 ```
    
 #### **Running the CLI Scripts**
